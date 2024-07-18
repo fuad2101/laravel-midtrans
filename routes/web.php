@@ -18,10 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('donasi','DonasiController@index');
-//Route::view('/donasi','donation');
 
 Route::controller(DonasiController::class)->group(function(){
-    Route::get('/donasi','index');
-    Route::post('/donasi','store');
+    Route::get('/donation','index');
+    Route::post('/donation','store');
 });
